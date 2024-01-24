@@ -52,6 +52,7 @@ img {
 }
 
 .img-continer {
+    width: 250px;
     margin-bottom: 24px;
 }
 
@@ -64,7 +65,7 @@ img {
 }
 
 .gerador-container input {
-    width: 189px;
+    width: 240px;
     height: 37px;
     padding: 6px;
     border-radius: 3px;
@@ -78,7 +79,7 @@ img {
 }
 
 .gerador-container button {
-    width: 113px;
+    width: 150px;
     height: 37px;
     padding: 6px;
     font-size: 12px;
@@ -88,6 +89,10 @@ img {
     border: none;
     background-color: #015958;
     cursor: pointer;
+}
+
+.gerador-container button:hover {
+    background-color: #097977;
 }
 
 .download-container {
