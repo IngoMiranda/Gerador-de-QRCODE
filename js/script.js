@@ -3,6 +3,8 @@ const qrCodeBtn = document.querySelector("#qr-form button");
 const qrCodeInput = document.querySelector("#qr-form input");
 const qrCodeImg = document.querySelector("#qr-img img");
 
+
+//Funções
 function gararQrCode() {
     const qrCodeInputValue = qrCodeInput.value;
     if (!qrCodeInputValue) return;
@@ -16,6 +18,8 @@ function gararQrCode() {
 
     console.log(qrCodeInput.value)
 };
+
+//Eventos
 
 qrCodeBtn.addEventListener("click", () => {
     gararQrCode();
