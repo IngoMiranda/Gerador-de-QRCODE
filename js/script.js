@@ -2,6 +2,7 @@ const container = document.querySelector(".container");
 const qrCodeBtn = document.querySelector("#qr-form button");
 const qrCodeInput = document.querySelector("#qr-form input");
 const qrCodeImg = document.querySelector("#qr-img img");
+const downloadBtn = document.querySelector("#download");
 
 
 //Funções
@@ -15,8 +16,23 @@ function gararQrCode() {
         container.classList.add("active");
         qrCodeBtn.innerText = "QRCODE gerado!";
     });
+};
 
-    console.log(qrCodeInput.value)
+
+
+// Download
+
+function downloadImg(url) {
+    fetch(url).then(res => res.blob()).then(file => {
+        let tempUrl = URL.createObjectURL(file);
+        let aTag = document.createElement("a");
+        aTag.href = tempUrl;
+        aTag.download = "filename";
+        document.body.appendChild(aTag);
+        aTag.click();
+        aTag.remove();
+    });
+
 };
 
 //Eventos
@@ -29,6 +45,10 @@ qrCodeInput.addEventListener("keydown", (e) => {
     if (e.code === "Enter") {
         gararQrCode();
     }
+});
+
+downloadBtn.addEventListener("click", () => {
+    downloadImg(qrCodeImg.value);
 });
 
 
