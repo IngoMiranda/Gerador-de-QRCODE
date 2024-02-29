@@ -48,7 +48,7 @@ qrCodeInput.addEventListener("keydown", (e) => {
 });
 
 downloadBtn.addEventListener("click", () => {
-    downloadImg(qrCodeImg.value);
+    downloadImg(qrCodeImg.src);
 });
 
 
